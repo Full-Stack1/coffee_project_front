@@ -8,7 +8,7 @@ import { UserCircle } from "lucide-react";
 import { NameuserContext } from '@/app/Context/AuthContext';
 const Profile = () => {
  const router = useRouter();
-const users=User();
+//const users=User();
 const UserOrder= orders.filter((isfound)=>isfound.users=== users._id);
 const [user, setUser] = useState({});
 
