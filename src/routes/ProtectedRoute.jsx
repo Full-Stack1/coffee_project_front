@@ -1,3 +1,4 @@
+"use client"
 import { navigate } from "next/dist/client/components/segment-cache/navigation"
 const  ProtectedRoute = ()=>
 {

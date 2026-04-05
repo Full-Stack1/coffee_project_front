@@ -8,7 +8,9 @@ const RootLayout = ({ children}) => {
   return (
     <html lang="en">
       <body>
+      
         <NameuserProvider>
+         
           <Header/>
         {children}
         <Footers/>

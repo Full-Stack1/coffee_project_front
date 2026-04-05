@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProtectedRoute } from '@/routes/ProtectedRoute'
-const page = () => {
+const admindashboard = () => {
   return (
     <div>
       <h1>Admin Dashboard</h1>
@@ -8,4 +8,4 @@ const page = () => {
   )
 }
 
-export default page
+export default admindashboard

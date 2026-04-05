@@ -14,8 +14,8 @@ const Register = () =>
   const[PassWord,setPassword]=useState("");
    const[Name,setName]=useState("");
     const[phone,setPhone]=useState("");
+     const [error, setError] = useState("");
     const router = useRouter();
-   // const { setName } = useContext(NameuserContext);
    const handlesubmit= async(e)=>
      {
        try
@@ -25,10 +25,9 @@ const Register = () =>
          
           if(exuser)
          { 
-          alert("The user IS Alrady  have  Account ")
+          setError("The Email Is Have ALready Account")
           return ;
         }
-        // setName(Name);
       localStorage.setItem("role", "customer");
       localStorage.setItem("userName", Name);
       localStorage.setItem("userEmail", Email);

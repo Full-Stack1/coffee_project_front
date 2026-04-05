@@ -1,45 +1,46 @@
 import API from "./api";
-// get all product 
-const getallproduct= async()=>
-{
-    const res= await API.get("products/all",data)
-    return res.data;
-}
 
-//fet cateroray product
-const getCategoryProduct = async()=>
-{
-    const res= await API.get("products/CategoryProduct/:categoryId",data)
-    return res.data;
-}
- // create product
- const createproduct = async(data)=>
- {
-    const res= await API.post("products//create",data)
-    return res.data;
- }
- // update product
- const updateproduct= async (data)=>
- {
-    const res= await API.put("products/update/:productId")
-    return res.data;
- }
- //delete product
- const hideproduct= async()=>
- {
-    const res= await API.delete("products//hide/:productid")
-    return res.data;
- }
- //search product
-    const searchproduct= async()=>
-    {
-        const res= await API.get("products//Filter-name-product",data)
-        return res.data;
-    }
+const getallproduct = async () => {
+  const res = await API.get("products/all");
+  return res.data;
+};
 
-    //page one product
-    const getproductbyid= async()=>
-    {
-        const res= await API.get("products/product-details/:productid",data)
-        return res.data;
-    }
+const getCategoryProduct = async (categoryId) => {
+  const res = await API.get(`products/CategoryProduct/${categoryId}`);
+  return res.data;
+};
+
+const createproduct = async (data) => {
+  const res = await API.post("products/create", data);
+  return res.data;
+};
+
+const updateproduct = async (productId, data) => {
+  const res = await API.put(`products/update/${productId}`, data);
+  return res.data;
+};
+
+const hideproduct = async (productId) => {
+  const res = await API.delete(`products/hide/${productId}`);
+  return res.data;
+};
+
+const searchproduct = async (name) => {
+  const res = await API.get(`products/Filter-name-product?name=${name}`);
+  return res.data;
+};
+
+const getproductbyid = async (productId) => {
+  const res = await API.get(`products/product-details/${productId}`);
+  return res.data;
+};
+
+export {
+     getallproduct, 
+     getCategoryProduct,
+    createproduct,
+    updateproduct,
+     hideproduct,
+    searchproduct,
+    getproductbyid
+         };

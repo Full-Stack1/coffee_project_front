@@ -25,7 +25,7 @@ const Login = () => {
     });
   
     if (!users) {
-      setError("Wrong email or password!");
+      setError("Not Correct  email or password!");
       return;
     }
     
@@ -35,6 +35,7 @@ const Login = () => {
     localStorage.setItem("userName", users.Name);
     localStorage.setItem("userEmail", users.Email);
     localStorage.setItem("userPhone", users.phone);
+
     if (users.role === "admin") router.push("/Admin_Dash");
     else if (users.role === "cashier") router.push("/Cashier_Dash");
     else if (users.role === "customer") router.push("/Categories");
