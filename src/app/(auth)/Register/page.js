@@ -21,6 +21,11 @@ const Register = () =>
        try
        {
          e.preventDefault();
+          if(!Name || !Email || !PassWord || !phone)
+        {
+          setError("Please Check All Information is Completed")
+          return;
+        }
           const exuser= User.find((info)=> info.Email===Email)
          
           if(exuser)
@@ -28,6 +33,7 @@ const Register = () =>
           setError("The Email Is Have ALready Account")
           return ;
         }
+       
       localStorage.setItem("role", "customer");
       localStorage.setItem("userName", Name);
       localStorage.setItem("userEmail", Email);
@@ -51,6 +57,7 @@ const Register = () =>
       </p>
 
    <form onSubmit={handlesubmit} className=" cardstyle bg-white border mb-15 border-[3px] border-[#ab8164] rounded-2xl flex flex-col gap-[5px]  p-[50px] shadow-lg  text-white">
+  <h5 className="text-[#C8956C] text-center font-bold ">{error} </h5>
   <label className="label">Enter Your Name</label>
   <input
     className="input"
@@ -87,17 +94,11 @@ const Register = () =>
   />
   <br />
 
-  <button
-    type="submit"
-    className="button w-full"
-  >
+  <button href="/Categories" type="submit" className="button w-full">
     Register
   </button>
 
-  <Link
-    href="/login"
-    className="text-start label  mt-5 text-sm underline "
-  >
+  <Link href="/login" className="text-start label  mt-5 text-sm underline ">
     Already have an account? Login
   </Link>
 </form>

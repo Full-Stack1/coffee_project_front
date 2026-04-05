@@ -50,8 +50,9 @@ return (
       <p className=" p-[5px] text-[#a07850] text-[15px] subtitle">
         Welcom Back Start your morning the right way
       </p>
-
+     
       <form onSubmit={handleSubmit} className=" cardstyle bg-white border border-[3px] border-[#ab8164] rounded-2xl flex flex-col gap-[5px]  mx-auto p-[40px] shadow-lg  text-white">
+       <h5 className="text-[#C8956C] text-center font-bold ">{error} </h5>
         <label className="label">Enter Your Email</label>
         <input
           className="input"
@@ -70,7 +71,6 @@ return (
         />
         <br />
 
-        {error && <p style={{ color: "#ff6b6b", fontSize: "13px" }}>{error}</p>}
 
         <button type="submit" className="button">
           Login

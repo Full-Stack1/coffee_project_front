@@ -12,7 +12,7 @@ const CategoriesDash = () =>
   return (
     <div  >
         <div className = "flex  justify-between p-[5px] m-[5px]">
-            <h3 className="font-bold  text-xl text-[#2c1200] mt-4 " >Welcom Back  to ~ coffee shop ~ {Name} </h3>
+            <h3 className="font-bold  text-xl text-[#2c1200] mt-4 " >Welcom  To ~ Coffee Shop ~ {Name} </h3>
             <input className='input p-[4px] m-[5px] font-bold  ' type= "text" placeholder='Search '/>
         </div>
         <div className="   grid grid-cols-2  min-h-[200px]  gap-10 align-center rounded-2xl p-8  ">

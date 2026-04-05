@@ -8,7 +8,7 @@ export default function Navbar() {
             <Link href="/Categories">Menu</Link>
           </li>
           <li>
-            <Link href="/orders">My Orders</Link>
+            <Link href="/User_profile">My Orders</Link>
           </li>
           <li>
             <Link href="/About">About</Link>
